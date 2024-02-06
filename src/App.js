@@ -72,33 +72,6 @@ const App = () => {
         matched: false
       }
     ];
-    // const requests = [];
-    // for(let i = 0; i < 8; i++) {
-    //   const randomNumber = Math.floor(Math.random() * 200) + 1;
-    //   requests.push(fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`))
-
-    // }
-    // await Promise.all(requests)
-    //   .then(res => Promise.all(res.map(r => r.json())))
-    //   .then(data => {
-    //     data.forEach(d => 
-    //       newCards.push({
-    //         name: d.name,
-    //         imageUrl: d.sprites.front_default,
-    //         matched: false
-    //       })
-    //     )
-    //   }).then(() => {
-    //     const doubleNewCards = [...newCards, ...newCards]
-    //     .sort(() => Math.random() - 0.5)
-    //     .map((card) => ({ ...card, id: Math.random() }));
-    //     setChoiceOne(null);
-    //     setChoiceTwo(null);
-    //     setCards(doubleNewCards);
-    //     setTurns(0);
-    //   }).then(() => {
-    //     setNewGameBtnDisabled(false)
-    //   })
     
     const doubleNewCards = [...newCards, ...newCards]
         .sort(() => Math.random() - 0.5)
@@ -149,6 +122,8 @@ const App = () => {
 
   return (
     <div className='container'>
+      <p>Benvenuta al gioco di memoria di Jez & Micol</p>
+      <p>È un gioco di carte che richiede concentrazione e <strong>memoria</strong>, in cui dovrai accoppiare le carte.</p>
       <button className='button' onClick={shuffleCards} disabled={newGameBtnDisabled}>New Game</button>
       <p className='turns'>Turns: {turns}</p>
       <div className='card-grid'>

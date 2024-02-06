@@ -1,6 +1,5 @@
 import React from 'react';
 import './SingleCard.css';
-import cardBack from '../images/card-back.jpg';
 
 const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
   const handleClick = () => {
